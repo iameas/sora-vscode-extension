@@ -1,1 +1,170 @@
-
+{
+  "name": "sora-vscode-extension",
+  "displayName": "Sora",
+  "description": "A Visual Studio Code extension for the Sora programming language, designed for easy mobile app development.",
+  "version": "1.0.0",
+  "publisher": "iameas",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "icon": "./assets/icon.png",
+  "activationEvents": [
+    "onLanguage:sora",
+    "onCommand:sora.initProject",
+    "onCommand:sora.buildApp",
+    "onCommand:sora.runApp",
+    "onCommand:sora.deployApp"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "contributes": {
+    "languages": [
+      {
+        "id": "sora",
+        "extensions": [".sora"],
+        "aliases": ["Sora"],
+        "configuration": "./language-configuration.json",
+        "grammar": "./src/languageServer/sora.tmLanguage.json",
+        "icon": {
+          "light": "./assets/icon.png",
+          "dark": "./assets/icon.png"
+        }
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sora",
+        "path": "./src/snippets/sora.snippets.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "sora.initProject",
+        "title": "Initialize Sora Project",
+        "category": "Sora"
+      },
+      {
+        "command": "sora.buildApp",
+        "title": "Build Sora App",
+        "category": "Sora"
+      },
+      {
+        "command": "sora.runApp",
+        "title": "Run Sora App",
+        "category": "Sora"
+      },
+      {
+        "command": "sora.deployApp",
+        "title": "Deploy Sora App",
+        "category": "Sora"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "sora.initProject",
+        "key": "ctrl+alt+i",
+        "mac": "cmd+alt+i",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "sora.buildApp",
+        "key": "ctrl+alt+b",
+        "mac": "cmd+alt+b",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "sora.runApp",
+        "key": "ctrl+alt+r",
+        "mac": "cmd+alt+r",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "sora.deployApp",
+        "key": "ctrl+alt+d",
+        "mac": "cmd+alt+d",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "sora.initProject",
+          "group": "navigation",
+          "when": "resourceLangId == sora"
+        },
+        {
+          "command": "sora.buildApp",
+          "group": "navigation",
+          "when": "resourceLangId == sora"
+        },
+        {
+          "command": "sora.runApp",
+          "group": "navigation",
+          "when": "resourceLangId == sora"
+        },
+        {
+          "command": "sora.deployApp",
+          "group": "navigation",
+          "when": "resourceLangId == sora"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "sora.initProject",
+          "group": "2_sora",
+          "when": "resourceLangId == sora"
+        },
+        {
+          "command": "sora.buildApp",
+          "group": "2_sora",
+          "when": "resourceLangId == sora"
+        },
+        {
+          "command": "sora.runApp",
+          "group": "2_sora",
+          "when": "resourceLangId == sora"
+        },
+        {
+          "command": "sora.deployApp",
+          "group": "2_sora",
+          "when": "resourceLangId == sora"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "Sora Language",
+      "properties": {
+        "sora.enableLinting": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable linting for Sora files."
+        },
+        "sora.customSDKPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the custom Sora SDK."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint .",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "mocha": "^8.0.0",
+    "typescript": "^4.0.0",
+    "vscode-test": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iameas/sora-vscode-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iameas/sora-vscode-extension/issues"
+  },
+  "homepage": "https://github.com/iameas/sora-vscode-extension#readme"
+}
