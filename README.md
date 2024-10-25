@@ -37,6 +37,17 @@ Alternatively, if published on the [VS Code Marketplace](https://marketplace.vis
 2. Utilize syntax highlighting, snippets, linting, and other features while coding.
 3. Access custom commands through the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P` on macOS) or context menus.
 
+## Usage Examples
+
+Here are some quick examples to demonstrate the capabilities of the Sora language:
+
+### Hello World Example
+
+```sora
+void main() {
+    print -r("Hello, World!")
+}
+
 ## Commands
 
 | Command             | Description                    |
