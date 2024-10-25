@@ -47,7 +47,7 @@ Here are some quick examples to demonstrate the capabilities of the Sora languag
 void main() {
     print -r("Hello, World!")
 }
-
+```
 ## Commands
 
 | Command             | Description                    |
