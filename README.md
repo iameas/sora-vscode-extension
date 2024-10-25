@@ -26,7 +26,7 @@ Welcome to the **Sora Language Support** Visual Studio Code extension, providing
 
 1. Clone or download this repository.
 2. Open the `sora-extension-1.0.0/` folder in VS Code.
-3. Run `npm install` to install dependencies.
+3. Run `cargo install` to install dependencies.
 4. Press `F5` to start debugging and open a new VS Code window with the extension loaded.
 
 Alternatively, if published on the [VS Code Marketplace](https://marketplace.visualstudio.com/), you can search for **Sora Language Support** and install it directly.
