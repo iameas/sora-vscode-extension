@@ -54,19 +54,9 @@ or
 ```
 ### Example of Sora codes
 ```sora
-on start:
-    create screen with title "welcome"
-
-create button "show Message" that does:
-    say "Hello, welcome to Sora!"
-
-let userName be input from text field "Your Name"
-
-create button "Submit" that does:
-    if userName is empty:
-        say "Please enter your name."
-        else,
-            say "Hello, " + userName + "!"
+when user clicks button:
+    say,
+        "Button was clicked!"
 ```
 
 ## Commands
