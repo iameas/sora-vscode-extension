@@ -50,9 +50,7 @@ void main() {
 ```
 or
 ```sora
-void main() {
     say "Hello, World!"
-}
 ```
 ## Commands
 
