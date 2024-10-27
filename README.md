@@ -48,6 +48,12 @@ void main() {
     print -r("Hello, World!")
 }
 ```
+or
+```sora
+void main() {
+    say "Hello, World!"
+}
+```
 ## Commands
 
 | Command             | Description                    |
