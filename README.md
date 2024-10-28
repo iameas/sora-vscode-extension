@@ -50,6 +50,7 @@ void main() {
 ```
 or
 ```sora
+function greet()
     say "Hello, World!"
 ```
 ### Example of Sora codes
